@@ -7,4 +7,5 @@ class CovidDataForm(forms.ModelForm):
     class Meta:
         model = models.Covid19
         fields = "__all__"
+        widgets = forms.DateInput(format=('%m/%d/%Y'),  attrs={'type' : 'date'})
         
