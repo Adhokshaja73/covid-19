@@ -5,13 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show Data</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
+    <a href="/add_data.html">Add data</a>
     <table>
         <thead>
             <td>State</td>
-            <td>Total cases</td>
+            <td>Date of Record</td>
+            <td>No of samples</td>
+            <td>No of deaths</td>
+            <td>No of positive</td>
+            <td>NO of negative</td>
+            <td>No of discharge</td>
         </thead>
+        {% for i in data %}
+            <td>{{ i.State_Name }}</td>
+            <td>{{ i.Date_of_Record }}</td>
+            <td>{{ i.No_of_Samples }}</td>
+            <td>{{ i.No_of_Deaths }}</td>
+            <td>{{ i.No_of_Positive }}</td>
+            <td>{{ i.No_of_Negative }}</td>
+            <td>{{ i.No_of_Discharge }}</td>
+        {% endfor %}
     </table>
 </body>
 </html>
