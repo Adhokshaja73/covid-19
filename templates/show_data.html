@@ -24,6 +24,8 @@
             <td>No of discharge</td>
         </thead>
         {% for i in data %}
+        <tr>
+            
             <td>{{ i.State_Name }}</td>
             <td>{{ i.Date_of_Record }}</td>
             <td>{{ i.No_of_Samples }}</td>
@@ -31,6 +33,7 @@
             <td>{{ i.No_of_Positive }}</td>
             <td>{{ i.No_of_Negative }}</td>
             <td>{{ i.No_of_Discharge }}</td>
+        </tr>
         {% endfor %}
     </table>
 </body>

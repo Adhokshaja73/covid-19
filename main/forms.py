@@ -1,11 +1,11 @@
 from dataclasses import field
 from django import forms
-from . import models
+from .models import *
 
 class CovidDataForm(forms.ModelForm):
     Date_of_Record = forms.DateField()
     class Meta:
-        model = models.Covid19
+        model = Covid19
         fields = "__all__"
-        widgets = {"Date_of_Record": forms.DateInput(format=('%m/%d/%Y'),  attrs={'type' : 'date'}),}
+        widgets = {'Date_of_Record': forms.DateInput(format=('%m/%d/%Y'),attrs={'class':'form-control','type' : 'date'})}
         
